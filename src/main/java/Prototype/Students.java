@@ -5,25 +5,25 @@ import java.util.List;
 
 public class Students implements Cloneable{
 
-    private List<String> empList;
+    private List<String> studentList;
 
     public Students(){
-        empList = new ArrayList<String>();
+        studentList = new ArrayList<String>();
     }
 
     public Students(List<String> list){
-        this.empList=list;
+        this.studentList=list;
     }
     public void loadData(){
         //read all employees from database and put into the list
-        empList.add("Kambiz");
-        empList.add("Petros");
-        empList.add("Karim");
-        empList.add("mansour");
+        studentList.add("Kambiz");
+        studentList.add("Petros");
+        studentList.add("Karim");
+        studentList.add("mansour");
     }
 
     public List<String> getStudentsList() {
-        return empList;
+        return studentList;
     }
 
     @Override

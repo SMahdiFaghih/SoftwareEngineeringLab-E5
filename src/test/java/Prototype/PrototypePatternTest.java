@@ -9,20 +9,20 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PrototypePatternTest {
     @Test
     public void StudentTest() throws CloneNotSupportedException {
-        Students Student = new Students();
-        Student.loadData();
+        Students Students = new Students();
+        Students.loadData();
 
         //Use the clone method to get the Student object
-        Students StudentNew = (Students) Student.clone();
-        Students StudentNew1 = (Students) Student.clone();
-        List<String> list = StudentNew.getStudentsList();
+        Students NewStudents = (Students) Students.clone();
+        Students NewStudents1 = (Students) Students.clone();
+        List<String> list = NewStudents.getStudentsList();
         list.add("Mohammadreza");
-        List<String> list1 = StudentNew1.getStudentsList();
+        List<String> list1 = NewStudents1.getStudentsList();
         list1.remove("Kambiz");
 
-        assertEquals(4,Student.getStudentsList().size());
-        assertEquals(5,StudentNew.getStudentsList().size());
-        assertEquals(3,StudentNew1.getStudentsList().size());
+        assertEquals(4,Students.getStudentsList().size());
+        assertEquals(5,NewStudents.getStudentsList().size());
+        assertEquals(3,NewStudents1.getStudentsList().size());
     }
 
 }
